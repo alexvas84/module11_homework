@@ -1,4 +1,4 @@
-let arr = ['j', 5, 2, 2];
+let arr = ['j', 5, 2, 2, NaN];
 
 
 function Count(arr) {
@@ -6,7 +6,7 @@ function Count(arr) {
     let notDiv2 = 0;
     let zerro = 0;
     arr.forEach((item, index) => {
-        if (typeof(item) === 'number'){
+        if (typeof(item) === 'number' && !isNaN(item)){
             if (item !== 0){
                 let x = item % 2;
                 switch (x) {
@@ -26,3 +26,5 @@ function Count(arr) {
 }
 
 Count(arr);
+
+// Задание выполнено верно, но с одним недочетом - не учтены значения NaN. Несмотря на то, что NaN не является числом, его тип равен "number". Поэтому, чтобы отсеять это значение, нужна отдельная проверка. Выше добавила

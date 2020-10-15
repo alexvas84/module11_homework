@@ -11,3 +11,9 @@ let stepen = (x, y) => {
     return result;
 }
 console.log(stepen(x, y));
+
+// Всё верно, но есть более короткий вариант решения, например так:
+
+const pow = (x, n) => {
+    return (x ** n)
+}
